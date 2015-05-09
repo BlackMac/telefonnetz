@@ -9,3 +9,10 @@ autopublish
 insecure
 iron:router
 cfs:http-methods
+joshowens:accounts-entry
+stylus
+coffeescript
+momentjs:moment
+rzymek:moment-locale-de
+accounts-ui
+reactive-var
