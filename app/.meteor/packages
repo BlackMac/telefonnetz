@@ -16,4 +16,5 @@ momentjs:moment
 rzymek:moment-locale-de
 accounts-ui
 reactive-var
+zimme:iron-router-active
 sipgate:io

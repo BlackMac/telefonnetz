@@ -1,3 +1,23 @@
 <template name="Home">
-  <h1>Find me in app/client/templates/home/home</h1>
+  <h1>Start</h1>
+  <div class="transactions-widget widget">
+    <h2 class="widget-headline">Anrufe</h2>
+    <div class="no-entries">
+      <i class="icon-phone-3 big-icon"></i>
+      <h2>Es sind noch keine Anrufe verfügbar.</h2>
+    </div>
+  </div><div class="files-widget widget">
+    <a href="{{pathFor 'files'}}"><h2 class="widget-headline">Kontakte</h2></a>
+    <div class="no-entries">
+      <i class="icon-contacts-3 big-icon"></i>
+      <h2>Es sind noch keine Kontakte verfügbar.</h2>
+    </div>
+  </div>
+  <div class="reports-widget widget">
+    <h2 class="widget-headline">Berichte</h2>
+    <div class="no-entries">
+      <i class="icon-business-chart-2 big-icon"></i>
+      <h2>Es sind noch keine Berichte verfügbar.</h2>
+    </div>
+  </div>
 </template>

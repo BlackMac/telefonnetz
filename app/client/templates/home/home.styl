@@ -1,0 +1,40 @@
+/*****************************************************************************/
+/* Home: Style */
+/*****************************************************************************/
+@import "nib"
+@import "../../stylesheets/variables.styl"
+
+.wrapper
+  .view
+    .widget//.widget
+      display inline-block
+      border DefaultBorder
+      border-radius BorderRadius
+      padding 15px 20px
+      padding-bottom 50px
+      box-sizing border-box
+      margin 1%
+      width 49%
+      height 250px
+      vertical-align top
+      .no-entries//.widget .no-entries
+        margin-top 50px
+        .big-icon//.widget .no-entries .big-icon
+          font-size 60px
+          margin-bottom 20px
+        h2 //.widget .no-entries h2
+          font-size 18px
+          line-height 26px
+      .widget-headline//.widget .no-entries .widget-headline
+        font-size 18px
+        color SecondaryTextColor
+        border-bottom DefaultBorder
+        padding-bottom 15px
+      &.reports-widget //.widget.reports-widget
+        width 100%
+        margin-left 0
+        margin-right 0
+      &.transactions-widget
+        margin-left 0
+      &.files-widget
+        margin-right 0
