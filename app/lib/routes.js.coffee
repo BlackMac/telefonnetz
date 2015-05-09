@@ -4,3 +4,9 @@ Router.route 'calls',
   controller: 'CallsController'
   action: 'action'
   where: 'client'
+
+Router.route 'contacts',
+  name: 'contacts'
+  controller: 'ContactsController'
+  action: 'action'
+  where: 'client'
