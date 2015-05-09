@@ -1,3 +1,46 @@
 <template name="MasterLayout">
-  {{> yield}}
+  {{> Header}}
+  <div class="wrapper">
+    {{> Navigation}}
+    <div class="view">
+      {{> yield}}
+    </div>
+  </div>
+<!--   {{#if currentUser}}
+  {{> VoiceAssistant}}
+{{/if}} -->
+</template>
+
+<template name="Header">
+  {{#if currentUser}}
+    <div class="app-header">
+      <div class="wrapper">
+        <div class="left">
+<!--           {{> Logo}}
+ -->        </div>
+        <div class="right">
+          <a href="" class="start-listening"><i class="icon-mic"></i></a>
+          <a href="{{pathFor 'entrySignOut'}}">
+            {{#if currentUser.profile.name}}
+              {{currentUser.profile.name}}
+            {{else}}
+              {{currentUser.emails.[0].address}}
+            {{/if}}<i class="icon-arrow-65 more-account-actions"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+</template>
+
+<template name="Navigation">
+  {{#if currentUser}}
+    <div class="navigation">
+      <a href="{{pathFor 'home'}}" class="nav-item {{isActiveRoute regex='home'}}"><i class="icon-scale-1"></i> Dashboard</a>
+      <a href="{{pathFor 'calls'}}" class="nav-item {{isActiveRoute regex='calls'}}"><i class="icon-phone-3"></i> Anrufe</a>
+      <a href="{{pathFor 'contacts'}}" class="nav-item {{isActiveRoute regex='contacts'}}"><i class="icon-contacts-3"></i> Kontakte</a>
+      <a href="{{pathFor 'home'}}" class="nav-item disabled"><i class="icon-business-chart-2"></i> Berichte</a>
+<!--       <a href="" class="nav-item voice"><i class="icon-play-1"></i> Voice</a>
+ -->    </div>
+  {{/if}}
 </template>

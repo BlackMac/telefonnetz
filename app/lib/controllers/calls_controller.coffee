@@ -11,9 +11,8 @@
     # returns true in any of your route functions.
     return
   data: ->
-    # return a global data context like this:
-    # Items.findOne({_id: this.params._id});
-    return
+    calls: ->
+      Calls.find()
   action: ->
     # You can create as many action functions as you'd like.
     # This is the primary function for running your route.

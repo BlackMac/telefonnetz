@@ -1,3 +1,14 @@
 <template name="Calls">
-  <h1>Calls</h1>
+  <h1>Anrufe</h1>
+  <ul>
+    {{#each calls}}
+      <li>
+        {{#if directionIn}}
+          <i class="icon-hang-phone-up"></i>
+        {{else}}
+          <i class="icon-phone-pick-up"></i>
+        {{/if}}
+        {{from}} -> {{to}} / Active: {{active}}</li>
+    {{/each}}
+  </ul>
 </template>
